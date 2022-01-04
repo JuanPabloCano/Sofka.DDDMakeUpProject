@@ -31,17 +31,13 @@ public class PerfilChange extends EventChange {
 
         apply((FotoDePerfilActualizada event) -> perfil.actualizarFotoDePerfil(event.getFotoDePerfil()));
 
-        apply((NombreCompletoReferenciaActualizado event) -> {
-            perfil.actualizarNombreCompletoReferencia(
-                    event.getReferenciasID(),
-                    event.getNombreCompleto());
-        });
+        apply((NombreCompletoReferenciaActualizado event) ->
+                perfil.actualizarNombreCompletoReferencia(
+                event.getNombreCompleto()));
 
-        apply((InformacionDeContactoReferenciaActualizado event) -> {
-            perfil.actualizarInformacionDeContactoReferencia(
-                    event.getReferenciasID(),
-                    event.getInformacionDeContacto()
-            );
-        });
+        apply((InformacionDeContactoReferenciaActualizado event) ->
+                perfil.actualizarInformacionDeContactoReferencia(
+                event.getInformacionDeContacto()
+        ));
     }
 }

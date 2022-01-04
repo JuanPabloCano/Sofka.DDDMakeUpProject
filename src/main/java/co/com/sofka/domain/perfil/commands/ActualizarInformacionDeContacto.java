@@ -1,11 +1,12 @@
 package co.com.sofka.domain.perfil.commands;
 
+import co.com.sofka.domain.generic.Command;
 import co.com.sofka.domain.perfil.values.InformacionDeContacto;
 import co.com.sofka.domain.perfil.values.PerfilID;
 
 import java.util.Objects;
 
-public class ActualizarInformacionDeContacto {
+public class ActualizarInformacionDeContacto extends Command {
 
     private final PerfilID perfilID;
     private final InformacionDeContacto informacionDeContacto;

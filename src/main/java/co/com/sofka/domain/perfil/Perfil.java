@@ -61,17 +61,16 @@ public class Perfil extends AggregateEvent<PerfilID> {
         appendChange(new FotoDePerfilActualizada(fotoDePerfil)).apply();
     }
 
-    public void actualizarNombreCompletoReferencia(ReferenciasID referenciasID, NombreCompleto nombreCompleto){
-        Objects.requireNonNull(referenciasID);
+    public void actualizarNombreCompletoReferencia(NombreCompleto nombreCompleto){
+        var id = new ReferenciasID();
         Objects.requireNonNull(nombreCompleto);
-        appendChange(new NombreCompletoReferenciaActualizado(referenciasID, nombreCompleto)).apply();
+        appendChange(new NombreCompletoReferenciaActualizado(id, nombreCompleto)).apply();
     }
 
-    public void actualizarInformacionDeContactoReferencia(ReferenciasID referenciasID,
-                                                          InformacionDeContacto informacionDeContacto){
-        Objects.requireNonNull(referenciasID);
+    public void actualizarInformacionDeContactoReferencia(InformacionDeContacto informacionDeContacto){
+        var id = new ReferenciasID();
         Objects.requireNonNull(informacionDeContacto);
-        appendChange(new InformacionDeContactoReferenciaActualizado(referenciasID, informacionDeContacto)).apply();
+        appendChange(new InformacionDeContactoReferenciaActualizado(id, informacionDeContacto)).apply();
     }
 
     public HojaDeVidaID HojaDeVidaID() {
@@ -86,7 +85,7 @@ public class Perfil extends AggregateEvent<PerfilID> {
         return fotoDePerfil;
     }
 
-    public Set<Referencias> getReferencias() {
+    public Set<Referencias> Referencias() {
         return referencias;
     }
 }

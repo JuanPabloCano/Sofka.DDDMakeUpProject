@@ -1,6 +1,7 @@
 package co.com.sofka.domain.gestionEducacion.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofka.domain.gestionEducacion.values.EducacionesID;
 import co.com.sofka.domain.gestionEducacion.values.Estudio;
 import co.com.sofka.domain.gestionEducacion.values.GestionEducacionID;
 import co.com.sofka.domain.gestionEducacion.values.Tipo;
@@ -11,18 +12,25 @@ import java.util.Objects;
 
 public class AgregarNuevaEducacion extends Command {
 
+    private final EducacionesID educacionesID;
     private final GestionEducacionID gestionEducacionID;
     private final Tipo tipo;
     private final Estudio estudio;
     private final Institucion institucion;
     private final Periodo periodo;
 
-    public AgregarNuevaEducacion(GestionEducacionID gestionEducacionID, Tipo tipo, Estudio estudio, Institucion institucion, Periodo periodo) {
+    public AgregarNuevaEducacion(EducacionesID educacionesID, GestionEducacionID gestionEducacionID, Tipo tipo,
+                                 Estudio estudio, Institucion institucion, Periodo periodo) {
+        this.educacionesID = Objects.requireNonNull(educacionesID);
         this.gestionEducacionID = Objects.requireNonNull(gestionEducacionID);
         this.tipo = Objects.requireNonNull(tipo);
         this.estudio = Objects.requireNonNull(estudio);
         this.institucion = Objects.requireNonNull(institucion);
         this.periodo = Objects.requireNonNull(periodo);
+    }
+
+    public EducacionesID getEducacionesID() {
+        return educacionesID;
     }
 
     public GestionEducacionID getGestionEducacionID() {
