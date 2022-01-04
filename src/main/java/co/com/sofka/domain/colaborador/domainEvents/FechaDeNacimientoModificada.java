@@ -8,17 +8,11 @@ import java.util.Objects;
 
 public class FechaDeNacimientoModificada extends DomainEvent {
 
-    private final ColaboradorID colaboradorID;
     private final FechaDeNacimiento fechaDeNacimiento;
 
-    public FechaDeNacimientoModificada(ColaboradorID colaboradorID, FechaDeNacimiento fechaDeNacimiento) {
+    public FechaDeNacimientoModificada(FechaDeNacimiento fechaDeNacimiento) {
         super("sofka.colaborador.fechadenacimientomodificada");
-        this.colaboradorID = Objects.requireNonNull(colaboradorID);
         this.fechaDeNacimiento = Objects.requireNonNull(fechaDeNacimiento);
-    }
-
-    public ColaboradorID getColaboradorID() {
-        return colaboradorID;
     }
 
     public FechaDeNacimiento getFechaDeNacimiento() {
