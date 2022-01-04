@@ -19,8 +19,6 @@ p
 Nsrc/main/java/co/com/sofka/domain/colaborador/domainEvents/PerfilAgregado.java,3\1\31d96011356256c1a5e1d90e68d94755613c4c8d
 e
 5src/main/java/co/com/sofka/generics/HojaDeVidaID.java,d\3\d3afb91396d30581b5804972cdab76f368595b3a
-g
-7src/main/java/co/com/sofka/generics/NombreCompleto.java,2\5\25bec9b7b1b48d04d95bad832b88f3ce6da406af
 r
 Bsrc/main/java/co/com/sofka/domain/perfil/values/ReferenciasID.java,9\f\9f5890d8bfa76297796a767f8944c14086dc2d62
 ‚
@@ -59,8 +57,6 @@ Nsrc/main/java/co/com/sofka/domain/colaborador/domainEvents/AreaModificada.java
 Ksrc/main/java/co/com/sofka/domain/colaborador/commands/ModificarGenero.java,c\d\cd1aa688be12dd1ef47d90b586c5e28ed228a2f5
 ƒ
 Ssrc/main/java/co/com/sofka/domain/colaborador/commands/ModificarNombreCompleto.java,0\b\0b1792485bcd0addda72d854297b08c655bdc945
-t
-Dsrc/main/java/co/com/sofka/domain/colaborador/ColaboradorChange.java,c\c\cc33cbf1b2620b1ca4d9f313c0fa7b3503d17b2b
 }
 Msrc/main/java/co/com/sofka/domain/perfil/commands/ActualizarFotoDePerfil.java,a\4\a4164ee2888ba401ee9c78f02a446162d4d3c8c2
 ‰
@@ -69,10 +65,6 @@ Ysrc/main/java/co/com/sofka/domain/perfil/commands/ActualizarNombreCompletoRefer
 `src/main/java/co/com/sofka/domain/perfil/commands/ActualizarInformacionDeContactoReferencia.java,d\7\d75bdd73c5519f46d8b257cd0a1ea43782381eea
 w
 Gsrc/main/java/co/com/sofka/domain/colaborador/values/ColaboradorID.java,a\e\ae6406644e8dac96d0f4b45a8f2548ff77b53cca
-w
-Gsrc/main/java/co/com/sofka/domain/experiencia/values/ExperienciaID.java,5\d\5dbf65a4cbe534b6f742ae3f86f2506402ce9986
-d
-4src/main/java/co/com/sofka/generics/Institucion.java,3\5\354bbb5f8354f60e8ec9d0de390637b29d26fa6b
 z
 Jsrc/main/java/co/com/sofka/domain/perfil/values/InformacionDeContacto.java,5\d\5d1ffdcf3db76c9447d46609506f4fcdf0f0b2ab
 m
@@ -93,8 +85,6 @@ ssrc/main/java/co/com/sofka/domain/experiencia/domainEvents/ConocimientosAdquiri
 Qsrc/main/java/co/com/sofka/domain/experiencia/domainEvents/ExperienciaCreada.java,0\2\028eb3d92f06215fb5087d9659fa24913c95e06d
 ˆ
 Xsrc/main/java/co/com/sofka/domain/experiencia/domainEvents/ExperienciaLaboralCreada.java,7\1\71f7e706d67186dbbb34a1f26c22bcc4dcf67cc5
-n
->src/main/java/co/com/sofka/domain/colaborador/Colaborador.java,3\0\302c848768a1af32568b58f9f0c54524d0beb895
 i
 9src/main/java/co/com/sofka/domain/perfil/Referencias.java,2\3\23576db21b041818f6ad9371158dde95e2ed1e51
 “
