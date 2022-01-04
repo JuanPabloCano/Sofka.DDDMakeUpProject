@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'co.com.sofka'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation group: 'co.com.sofka', name: 'domain', version: '1.5.0'
+    implementation group: 'co.com.sofka', name: 'business', version: '1.5.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.2.0'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.2.0'
+    testImplementation group: 'org.unitils', name: 'unitils-core', version: '3.4.6'
+
+}
+
+test {
+    useJUnitPlatform()
+}
