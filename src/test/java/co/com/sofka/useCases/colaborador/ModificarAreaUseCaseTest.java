@@ -56,6 +56,7 @@ class ModificarAreaUseCaseTest {
                 new Genero("Masculino"),
                 new Area("Desarrollo")
         ), new AreaModificada(
+                new ColaboradorID(),
                 new Area("Sistemas 1")
         ));
     }

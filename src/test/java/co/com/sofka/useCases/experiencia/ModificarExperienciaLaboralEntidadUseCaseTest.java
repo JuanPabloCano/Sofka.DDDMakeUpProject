@@ -69,6 +69,7 @@ class ModificarExperienciaLaboralEntidadUseCaseTest {
                 new Periodo(LocalDateTime.now(), LocalDateTime.now().plusDays(5)),
                 new ConocimientosAdquiridos("Sistemas")
         ), new EntidadExperienciaLaboralModificada(
+                new ExperienciaID(),
                 new ExperienciaLaboralID(),
                 new Institucion("Sena")));
     }

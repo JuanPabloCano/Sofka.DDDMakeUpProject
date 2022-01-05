@@ -1,0 +1,8 @@
+
+F
+java:S2160"+Override the "equals" method in this class.(éÙýîÿÿÿÿÿ
+o	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÞøŠúÿÿÿÿ8é»ü·â/
+h	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¦ê®úÿÿÿÿ
+h	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ú´“ùÿÿÿÿ
+c	java:S1006"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§áÑ´
+h	java:S100:"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ôƒ¤ûÿÿÿÿ

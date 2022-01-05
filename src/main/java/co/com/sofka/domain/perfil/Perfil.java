@@ -47,8 +47,9 @@ public class Perfil extends AggregateEvent<PerfilID> {
     }
 
     public void actualizarInformacionDeContacto(InformacionDeContacto informacionDeContacto) {
+        var id = new PerfilID();
         Objects.requireNonNull(informacionDeContacto);
-        appendChange(new InformacionDeContactoActualizada(informacionDeContacto)).apply();
+        appendChange(new InformacionDeContactoActualizada(id, informacionDeContacto)).apply();
     }
 
     public void actualizarFotoDePerfil(FotoDePerfil fotoDePerfil) {

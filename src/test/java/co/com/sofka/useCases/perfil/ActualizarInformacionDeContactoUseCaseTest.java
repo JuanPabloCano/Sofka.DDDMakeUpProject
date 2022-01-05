@@ -56,6 +56,7 @@ class ActualizarInformacionDeContactoUseCaseTest {
                 new InformacionDeContacto("Soltero"),
                 new NombreCompleto("Juan", "Cano")
         ), new InformacionDeContactoActualizada(
+                new PerfilID(),
                 new InformacionDeContacto("Casado")
         ));
     }

@@ -49,9 +49,10 @@ public class Experiencia extends AggregateEvent<ExperienciaID> {
     }
 
     public void modificarExperienciaLaboralEntidad(Institucion institucion){
+        var experienciaID = new ExperienciaID();
         var id = new ExperienciaLaboralID();
         Objects.requireNonNull(institucion);
-        appendChange(new EntidadExperienciaLaboralModificada(id, institucion)).apply();
+        appendChange(new EntidadExperienciaLaboralModificada(experienciaID,id, institucion)).apply();
     }
 
     public void modificarExperienciaLaboralPeriodo(Periodo periodo) {

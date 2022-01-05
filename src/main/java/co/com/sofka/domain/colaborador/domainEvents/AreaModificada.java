@@ -8,11 +8,17 @@ import java.util.Objects;
 
 public class AreaModificada extends DomainEvent {
 
+    private final ColaboradorID colaboradorID;
     private final Area area;
 
-    public AreaModificada(Area area) {
+    public AreaModificada(ColaboradorID colaboradorID, Area area) {
         super("sofka.colaborador.areamodificada");
+        this.colaboradorID = Objects.requireNonNull(colaboradorID);
         this.area = Objects.requireNonNull(area);
+    }
+
+    public ColaboradorID getColaboradorID() {
+        return colaboradorID;
     }
 
     public Area getArea() {

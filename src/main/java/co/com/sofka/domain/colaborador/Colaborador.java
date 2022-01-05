@@ -69,8 +69,9 @@ public class Colaborador extends AggregateEvent<ColaboradorID> {
     }
 
     public void modificarArea(Area area){
+        var id = new ColaboradorID();
         Objects.requireNonNull(area);
-        appendChange(new AreaModificada(area)).apply();
+        appendChange(new AreaModificada(id, area)).apply();
     }
 
     public HojaDeVidaID HojaDeVidID() {
