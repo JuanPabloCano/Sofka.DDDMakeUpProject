@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.com.sofka.useCases.perfil.ActualizarInformacionDeContactoReferenciaUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T01:35:07" hostname="DESKTOP-44Q5F13" time="0.009">
+<testsuite name="co.com.sofka.useCases.perfil.ActualizarInformacionDeContactoReferenciaUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T17:37:31" hostname="DESKTOP-44Q5F13" time="0.092">
   <properties/>
-  <testcase name="actualizarInformacionDeContactoReferenciaUseCaseTest()" classname="co.com.sofka.useCases.perfil.ActualizarInformacionDeContactoReferenciaUseCaseTest" time="0.009"/>
+  <testcase name="actualizarInformacionDeContactoReferenciaUseCaseTest()" classname="co.com.sofka.useCases.perfil.ActualizarInformacionDeContactoReferenciaUseCaseTest" time="0.092"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

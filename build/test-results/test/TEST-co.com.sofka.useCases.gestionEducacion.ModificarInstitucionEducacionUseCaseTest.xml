@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.com.sofka.useCases.gestionEducacion.ModificarInstitucionEducacionUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T01:35:07" hostname="DESKTOP-44Q5F13" time="0.004">
+<testsuite name="co.com.sofka.useCases.gestionEducacion.ModificarInstitucionEducacionUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T17:37:31" hostname="DESKTOP-44Q5F13" time="0.068">
   <properties/>
-  <testcase name="modificarInstitucionEducacionUseCaseTest()" classname="co.com.sofka.useCases.gestionEducacion.ModificarInstitucionEducacionUseCaseTest" time="0.004"/>
+  <testcase name="modificarInstitucionEducacionUseCaseTest()" classname="co.com.sofka.useCases.gestionEducacion.ModificarInstitucionEducacionUseCaseTest" time="0.068"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
