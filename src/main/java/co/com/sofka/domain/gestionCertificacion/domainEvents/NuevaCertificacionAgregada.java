@@ -10,21 +10,21 @@ import java.util.Objects;
 
 public class NuevaCertificacionAgregada extends DomainEvent {
 
-    private final CertificacionID id;
+    private final CertificacionID certificacionID;
     private final Nombre nombre;
     private final Institucion institucion;
     private final Periodo periodo;
 
-    public NuevaCertificacionAgregada(CertificacionID id, Nombre nombre, Institucion institucion, Periodo periodo) {
+    public NuevaCertificacionAgregada(CertificacionID certificacionID, Nombre nombre, Institucion institucion, Periodo periodo) {
         super("sofka.gestioncertificacion.nuevacertificacionagregada");
-        this.id = Objects.requireNonNull(id);
+        this.certificacionID = Objects.requireNonNull(certificacionID);
         this.nombre = Objects.requireNonNull(nombre);
         this.institucion = Objects.requireNonNull(institucion);
         this.periodo = Objects.requireNonNull(periodo);
     }
 
-    public CertificacionID getId() {
-        return id;
+    public CertificacionID getCertificacionID() {
+        return certificacionID;
     }
 
     public Nombre getNombre() {

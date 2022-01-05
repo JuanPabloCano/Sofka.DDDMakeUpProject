@@ -1,6 +1,7 @@
 package co.com.sofka.domain.experiencia;
 
 import co.com.sofka.domain.experiencia.values.ConocimientosAdquiridos;
+import co.com.sofka.domain.experiencia.values.ExperienciaID;
 import co.com.sofka.domain.experiencia.values.ExperienciaLaboralID;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.generics.Institucion;
@@ -10,14 +11,17 @@ import java.util.Objects;
 
 public class ExperienciaLaboral extends Entity<ExperienciaLaboralID> {
 
+    protected ExperienciaID experienciaID;
     protected ExperienciaLaboralID experienciaLaboralID;
     protected Institucion institucion;
     protected Periodo periodo;
     protected ConocimientosAdquiridos conocimientosAdquiridos;
 
-    public ExperienciaLaboral(ExperienciaLaboralID experienciaLaboralID, Institucion institucion, Periodo periodo,
+    public ExperienciaLaboral(ExperienciaID experienciaID, ExperienciaLaboralID experienciaLaboralID,
+                              Institucion institucion, Periodo periodo,
                               ConocimientosAdquiridos conocimientosAdquiridos) {
         super(experienciaLaboralID);
+        this.experienciaID = Objects.requireNonNull(experienciaID);
         this.institucion = Objects.requireNonNull(institucion);
         this.periodo = Objects.requireNonNull(periodo);
         this.conocimientosAdquiridos = Objects.requireNonNull(conocimientosAdquiridos);
@@ -33,6 +37,10 @@ public class ExperienciaLaboral extends Entity<ExperienciaLaboralID> {
 
     public void modificarConocimientosAdquiridos(ConocimientosAdquiridos conocimientosAdquiridos){
         this.conocimientosAdquiridos = Objects.requireNonNull(conocimientosAdquiridos);
+    }
+
+    public ExperienciaID ExperienciaID() {
+        return experienciaID;
     }
 
     public ExperienciaLaboralID ExperienciaLaboralID() {

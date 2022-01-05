@@ -4,7 +4,10 @@ import co.com.sofka.domain.colaborador.domainEvents.*;
 import co.com.sofka.domain.colaborador.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.domain.perfil.values.FotoDePerfil;
+import co.com.sofka.domain.perfil.values.InformacionDeContacto;
 import co.com.sofka.domain.perfil.values.PerfilID;
+import co.com.sofka.domain.perfil.values.ReferenciasID;
 import co.com.sofka.generics.NombreCompleto;
 import co.com.sofka.generics.HojaDeVidaID;
 

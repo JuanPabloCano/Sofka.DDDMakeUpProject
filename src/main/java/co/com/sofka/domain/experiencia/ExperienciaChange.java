@@ -2,6 +2,7 @@ package co.com.sofka.domain.experiencia;
 
 import co.com.sofka.domain.experiencia.domainEvents.*;
 import co.com.sofka.domain.generic.EventChange;
+import co.com.sofka.generics.Institucion;
 
 public class ExperienciaChange extends EventChange {
 
@@ -9,34 +10,22 @@ public class ExperienciaChange extends EventChange {
 
         apply((ExperienciaCreada event) -> experiencia.hojaDeVidaID = event.getHojaDeVidaID());
 
-        apply((ExperienciaLaboralCreada event) -> experiencia.experienciaLaboral.add(
-                new ExperienciaLaboral(
-                event.getId(),
-                event.getInstitucion(),
-                event.getPeriodo(),
-                event.getConocimientosAdquiridos()
-        )));
-
-        apply((ExperienciaLaboralEliminada event) -> {
-            var idExperienciaLaboral = event.getExperienciaLaboralID();
-            experiencia.experienciaLaboral.removeIf(experienciaLaboral ->
-                    experienciaLaboral.ExperienciaLaboralID()
-                    .equals(idExperienciaLaboral));
-        });
-
-        apply((EntidadExperienciaLaboralModificada event) ->
-                experiencia.modificarExperienciaLaboralEntidad(
-                event.getInstitucion()
+        apply((ExperienciaLaboralCreada event) -> experiencia.experienciaLaboral =
+                        new ExperienciaLaboral(
+                        event.getExperienciaID(),
+                        event.getExperienciaLaboralID(),
+                        event.getInstitucion(),
+                        event.getPeriodo(),
+                        event.getConocimientosAdquiridos()
         ));
 
+        apply((EntidadExperienciaLaboralModificada event) ->
+                experiencia.experienciaLaboral.institucion = event.getInstitucion());
+
         apply((PeriodoExperienciaLaboralModificada event) ->
-                experiencia.modificarExperienciaLaboralPeriodo(
-                        event.getPeriodo()
-                ));
+                experiencia.experienciaLaboral.periodo = event.getPeriodo());
 
         apply((ConocimientosAdquiridosExperienciaLaboralModificada event) ->
-                experiencia.modificarExperienciaLaboralConocimientosAdquiridos(
-                        event.getConocimientosAdquiridos()
-                ));
+                experiencia.experienciaLaboral.conocimientosAdquiridos = event.getConocimientosAdquiridos());
     }
 }

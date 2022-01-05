@@ -18,7 +18,7 @@ import java.util.Set;
 public class GestionEducacion extends AggregateEvent<GestionEducacionID> {
 
     protected HojaDeVidaID hojaDeVidaID;
-    protected Set<Educaciones> educaciones;
+    protected Educaciones educaciones;
 
 
     private GestionEducacion(GestionEducacionID gestionEducacionID) {
@@ -44,11 +44,6 @@ public class GestionEducacion extends AggregateEvent<GestionEducacionID> {
         Objects.requireNonNull(institucion);
         Objects.requireNonNull(periodo);
         appendChange(new EducacionAgregada(id, tipo, estudio, institucion, periodo)).apply();
-    }
-
-    public void eliminarEducacion(EducacionesID educacionesID){
-        Objects.requireNonNull(educacionesID);
-        appendChange(new EducacionEliminada(educacionesID)).apply();
     }
 
     public void modificarTipoEducacion(Tipo tipo){
@@ -79,7 +74,7 @@ public class GestionEducacion extends AggregateEvent<GestionEducacionID> {
         return hojaDeVidaID;
     }
 
-    public Set<Educaciones> getEducaciones() {
+    public Educaciones getEducaciones() {
         return educaciones;
     }
 }

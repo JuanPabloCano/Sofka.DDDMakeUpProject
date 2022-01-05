@@ -14,7 +14,9 @@ public class ModificarExperienciaLaboralEntidadUseCase extends UseCase<RequestCo
         var command = modificarExperienciaLaboralEntidadRequestCommand.getCommand();
         var experiencia = Experiencia.from(command.getExperienciaID(), retrieveEvents());
 
-        experiencia.modificarExperienciaLaboralEntidad(command.getInstitucion());
+        experiencia.modificarExperienciaLaboralEntidad(
+                command.getInstitucion()
+        );
         emit().onResponse(new ResponseEvents(experiencia.getUncommittedChanges()));
 
     }

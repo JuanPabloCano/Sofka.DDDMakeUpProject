@@ -15,12 +15,9 @@ public class AgregarExperienciaLaboralUseCase extends UseCase<RequestCommand<Agr
         var command = agregarExperienciaLaboralRequestCommand.getCommand();
         var experiencia = Experiencia.from(command.getExperienciaID(), retrieveEvents());
 
-        if (experiencia.getExperienciaLaboral().size() > 20) {
-            throw new BusinessException(command.getExperienciaLaboralID().value(), "No puede tener más de 20 " +
-                    "experiencias laborales");
-        }
-
         experiencia.agregarExperienciaLaboral(
+                command.getExperienciaID(),
+                command.getExperienciaLaboralID(),
                 command.getInstitucion(),
                 command.getPeriodo(),
                 command.getConocimientosAdquiridos()

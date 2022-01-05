@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.sofka.useCases.colaborador.AgregarPerfilUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T01:35:05" hostname="DESKTOP-44Q5F13" time="1.686">
+  <properties/>
+  <testcase name="agregarPerfilUseCase()" classname="co.com.sofka.useCases.colaborador.AgregarPerfilUseCaseTest" time="1.686"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

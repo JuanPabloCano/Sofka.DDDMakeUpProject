@@ -6,12 +6,12 @@ import co.com.sofka.domain.gestionCertificacion.values.Nombre;
 
 import java.util.Objects;
 
-public class nombreCertificacionModificada extends DomainEvent {
+public class NombreCertificacionModificada extends DomainEvent {
 
     private final CertificacionID id;
     private final Nombre nombre;
 
-    public nombreCertificacionModificada(CertificacionID id, Nombre nombre) {
+    public NombreCertificacionModificada(CertificacionID id, Nombre nombre) {
         super("sofka.gestioncertificacion.nombrecertificacionmodificada");
         this.id = Objects.requireNonNull(id);
         this.nombre = Objects.requireNonNull(nombre);

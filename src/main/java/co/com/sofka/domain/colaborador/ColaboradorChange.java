@@ -19,16 +19,15 @@ public class ColaboradorChange extends EventChange {
 
         apply((PerfilAgregado event) -> colaborador.perfilID = event.getPerfilID());
 
-        apply((FechaDeNacimientoModificada event) -> colaborador.modificarFechaDeNacimiento(
-                event.getFechaDeNacimiento()));
+        apply((FechaDeNacimientoModificada event) -> colaborador.fechaDeNacimiento = event.getFechaDeNacimiento());
 
         apply((NombreCompletoModificado event) ->
-                colaborador.modificarNombreCompleto(event.getNombreCompleto()));
+                colaborador.nombreCompleto = event.getNombreCompleto());
 
-        apply((CedulaModificada event) -> colaborador.modificarCedula(event.getCedula()));
+        apply((CedulaModificada event) -> colaborador.cedula = event.getCedula());
 
-        apply((GeneroModificado event) -> colaborador.modificarGenero(event.getGenero()));
+        apply((GeneroModificado event) -> colaborador.genero = event.getGenero());
 
-        apply((AreaModificada event) -> colaborador.modificarArea(event.getArea()));
+        apply((AreaModificada event) -> colaborador.area = event.getArea());
     }
 }

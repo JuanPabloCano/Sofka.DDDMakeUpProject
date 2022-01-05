@@ -12,12 +12,11 @@ import co.com.sofka.generics.Periodo;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 public class GestionCertificacion extends AggregateEvent<GestionCertificacionID> {
 
     protected HojaDeVidaID hojaDeVidaID;
-    protected Set<Certificacion> certificacion;
+    protected Certificacion certificacion;
 
     private GestionCertificacion(GestionCertificacionID gestionCertificacionID) {
         super(gestionCertificacionID);
@@ -43,15 +42,10 @@ public class GestionCertificacion extends AggregateEvent<GestionCertificacionID>
         appendChange(new NuevaCertificacionAgregada(id, nombre, institucion, periodo)).apply();
     }
 
-    public void eliminarCertificacion(CertificacionID certificacionID){
-        Objects.requireNonNull(certificacionID);
-        appendChange(new CertificacionEliminada(certificacionID)).apply();
-    }
-
     public void modificarNombreCertificacion(Nombre nombre){
         var id = new CertificacionID();
         Objects.requireNonNull(nombre);
-        appendChange(new nombreCertificacionModificada(id, nombre)).apply();
+        appendChange(new NombreCertificacionModificada(id, nombre)).apply();
     }
 
     public void modificarInstitucionCertificacion(Institucion institucion){
@@ -70,7 +64,7 @@ public class GestionCertificacion extends AggregateEvent<GestionCertificacionID>
         return hojaDeVidaID;
     }
 
-    public Set<Certificacion> getCertificacion() {
+    public Certificacion getCertificacion() {
         return certificacion;
     }
 }

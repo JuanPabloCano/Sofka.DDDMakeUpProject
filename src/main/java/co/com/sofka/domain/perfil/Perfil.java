@@ -19,7 +19,7 @@ public class Perfil extends AggregateEvent<PerfilID> {
     protected HojaDeVidaID hojaDeVidaID;
     protected InformacionDeContacto informacionDeContacto;
     protected FotoDePerfil fotoDePerfil;
-    protected Set<Referencias> referencias;
+    protected Referencias referencias;
 
     private Perfil(PerfilID perfilID) {
         super(perfilID);
@@ -44,11 +44,6 @@ public class Perfil extends AggregateEvent<PerfilID> {
         Objects.requireNonNull(informacionDeContacto);
         Objects.requireNonNull(nombreCompleto);
         appendChange(new NuevaReferenciaAgregada(id, informacionDeContacto, nombreCompleto)).apply();
-    }
-
-    public void eliminarReferencia(ReferenciasID referenciasID) {
-        Objects.requireNonNull(referenciasID);
-        appendChange(new ReferenciaEliminada(referenciasID)).apply();
     }
 
     public void actualizarInformacionDeContacto(InformacionDeContacto informacionDeContacto) {
@@ -85,7 +80,7 @@ public class Perfil extends AggregateEvent<PerfilID> {
         return fotoDePerfil;
     }
 
-    public Set<Referencias> Referencias() {
+    public Referencias Referencias() {
         return referencias;
     }
 }

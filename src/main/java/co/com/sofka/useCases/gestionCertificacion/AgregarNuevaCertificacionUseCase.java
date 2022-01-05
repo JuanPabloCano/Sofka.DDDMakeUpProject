@@ -17,10 +17,6 @@ public class AgregarNuevaCertificacionUseCase extends UseCase<RequestCommand<Agr
         var command = agregarNuevaCertificacionRequestCommand.getCommand();
         var certificacion = GestionCertificacion.from(command.getGestionCertificacionID(), retrieveEvents());
 
-        if (certificacion.getCertificacion().size() > 10){
-            throw new BusinessException(command.getCertificacionID().value(), "No puede tener más de 10 " +
-                    "certificaciones");
-        }
         certificacion.agregarNuevaCertificacion(
                 command.getNombre(),
                 command.getInstitucion(),

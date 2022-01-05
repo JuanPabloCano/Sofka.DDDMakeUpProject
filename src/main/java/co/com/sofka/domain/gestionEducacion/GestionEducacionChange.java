@@ -10,7 +10,7 @@ public class GestionEducacionChange extends EventChange {
 
         apply((GestionEducacionCreada event) -> gestionEducacion.hojaDeVidaID = event.getHojaDeVidaID());
 
-        apply((EducacionAgregada event) -> gestionEducacion.educaciones.add(
+        apply((EducacionAgregada event) -> gestionEducacion.educaciones = (
                 new Educaciones(
                 event.getId(),
                 event.getTipo(),
@@ -19,26 +19,12 @@ public class GestionEducacionChange extends EventChange {
                 event.getPeriodo()
         )));
 
-        apply((EducacionEliminada event) -> {
-            var educacionID = new EducacionesID();
-            gestionEducacion.educaciones.removeIf(educaciones ->
-                    educaciones.educacionesID.equals(educacionID));
-        });
+        apply((TipoEducacionModificado event) -> gestionEducacion.educaciones.tipo = event.getTipo());
 
-        apply((TipoEducacionModificado event) -> gestionEducacion.modificarTipoEducacion(
-                event.getTipo()
-        ));
+        apply((EstudioEducacionModificado event) -> gestionEducacion.educaciones.estudio = event.getEstudio());
 
-        apply((EstudioEducacionModificado event) -> gestionEducacion.modificarEstudioEducacion(
-                event.getEstudio()
-        ));
+        apply((PeriodoEducacionModificado event) -> gestionEducacion.educaciones.periodo = event.getPeriodo());
 
-        apply((PeriodoEducacionModificado event) -> gestionEducacion.actualizarPeriodoEducacion(
-                event.getPeriodo()
-        ));
-
-        apply((InstitucionEducacionModificada event) -> gestionEducacion.modificarInstitucionEducacion(
-                event.getInstitucion()
-        ));
+        apply((InstitucionEducacionModificada event) -> gestionEducacion.educaciones.institucion = event.getInstitucion());
     }
 }

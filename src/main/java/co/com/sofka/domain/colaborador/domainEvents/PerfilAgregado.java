@@ -11,7 +11,7 @@ public class PerfilAgregado extends DomainEvent {
 
     public PerfilAgregado(PerfilID perfilID) {
         super("sofka.colaborador.perfilagregado");
-        this.perfilID = Objects.requireNonNull(PerfilAgregado.this.perfilID);
+        this.perfilID = Objects.requireNonNull(perfilID);
     }
 
     public PerfilID getPerfilID() {

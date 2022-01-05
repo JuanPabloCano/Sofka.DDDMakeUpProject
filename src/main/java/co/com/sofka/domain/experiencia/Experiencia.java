@@ -17,7 +17,7 @@ import java.util.Set;
 public class Experiencia extends AggregateEvent<ExperienciaID> {
 
     protected HojaDeVidaID hojaDeVidaID;
-    protected Set<ExperienciaLaboral> experienciaLaboral;
+    protected ExperienciaLaboral experienciaLaboral;
 
     private Experiencia(ExperienciaID experienciaID) {
         super(experienciaID);
@@ -35,19 +35,17 @@ public class Experiencia extends AggregateEvent<ExperienciaID> {
         return experiencia;
     }
 
-    public void agregarExperienciaLaboral(Institucion institucion, Periodo periodo,
+    public void agregarExperienciaLaboral(ExperienciaID experienciaID, ExperienciaLaboralID experienciaLaboralID,
+                                          Institucion institucion,
+                                          Periodo periodo,
                                           ConocimientosAdquiridos conocimientosAdquiridos){
-        var id = new ExperienciaLaboralID();
+        Objects.requireNonNull(experienciaID);
+        Objects.requireNonNull(experienciaLaboralID);
         Objects.requireNonNull(institucion);
         Objects.requireNonNull(periodo);
         Objects.requireNonNull(conocimientosAdquiridos);
-        appendChange(new ExperienciaLaboralCreada(id, institucion, periodo, conocimientosAdquiridos)).apply();
-    }
-
-    public void eliminarExperienciaLaboral(ExperienciaLaboralID experienciaLaboralID){
-        Objects.requireNonNull(experienciaLaboralID);
-        appendChange(new ExperienciaLaboralEliminada(experienciaLaboralID)).apply();
-
+        appendChange(new ExperienciaLaboralCreada(experienciaID, experienciaLaboralID, institucion, periodo,
+                conocimientosAdquiridos)).apply();
     }
 
     public void modificarExperienciaLaboralEntidad(Institucion institucion){
@@ -72,7 +70,7 @@ public class Experiencia extends AggregateEvent<ExperienciaID> {
         return hojaDeVidaID;
     }
 
-    public Set<ExperienciaLaboral> getExperienciaLaboral() {
+    public ExperienciaLaboral ExperienciaLaboral() {
         return experienciaLaboral;
     }
 }

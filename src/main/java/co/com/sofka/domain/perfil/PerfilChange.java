@@ -13,31 +13,22 @@ public class PerfilChange extends EventChange {
             perfil.fotoDePerfil = event.getFotoDePerfil();
         });
 
-        apply((NuevaReferenciaAgregada event) -> {
-            perfil.referencias.add(new Referencias(
-                    event.getReferenciasID(),
-                    event.getInformacionDeContacto(),
-                    event.getNombreCompleto()
-            ));
-        });
-
-        apply((ReferenciaEliminada event) ->{
-            var referenciaID = event.getReferenciasID();
-            perfil.referencias.removeIf(referencia -> referencia.ReferenciasID().equals(referenciaID));
-        });
+        apply((NuevaReferenciaAgregada event) -> perfil.referencias =
+                (new Referencias(
+                event.getReferenciasID(),
+                event.getInformacionDeContacto(),
+                event.getNombreCompleto()
+        )));
 
         apply((InformacionDeContactoActualizada event) ->
-                perfil.actualizarInformacionDeContacto(event.getInformacionDeContacto()));
+                perfil.informacionDeContacto = event.getInformacionDeContacto());
 
-        apply((FotoDePerfilActualizada event) -> perfil.actualizarFotoDePerfil(event.getFotoDePerfil()));
+        apply((FotoDePerfilActualizada event) -> perfil.fotoDePerfil = event.getFotoDePerfil());
 
         apply((NombreCompletoReferenciaActualizado event) ->
-                perfil.actualizarNombreCompletoReferencia(
-                event.getNombreCompleto()));
+                perfil.referencias.nombreCompleto = event.getNombreCompleto());
 
         apply((InformacionDeContactoReferenciaActualizado event) ->
-                perfil.actualizarInformacionDeContactoReferencia(
-                event.getInformacionDeContacto()
-        ));
+                perfil.referencias.informacionDeContacto = event.getInformacionDeContacto());
     }
 }

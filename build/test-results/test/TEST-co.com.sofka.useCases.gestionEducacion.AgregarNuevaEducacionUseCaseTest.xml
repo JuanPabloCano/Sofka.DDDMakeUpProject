@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.sofka.useCases.gestionEducacion.AgregarNuevaEducacionUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-05T01:35:07" hostname="DESKTOP-44Q5F13" time="0.032">
+  <properties/>
+  <testcase name="agregarNuevaEducacionUseCaseTest()" classname="co.com.sofka.useCases.gestionEducacion.AgregarNuevaEducacionUseCaseTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

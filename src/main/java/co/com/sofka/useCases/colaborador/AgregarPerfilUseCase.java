@@ -16,7 +16,6 @@ public class AgregarPerfilUseCase extends UseCase<RequestCommand<AgregarPerfil>,
         colaborador.agregarPerfil(
                 command.getPerfilID()
         );
-
         emit().onResponse(new ResponseEvents(colaborador.getUncommittedChanges()));
     }
 }
